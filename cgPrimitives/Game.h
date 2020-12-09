@@ -12,6 +12,7 @@
 #include "Graphic/GUILine.h"
 #include<vector>
 
+
 class Game : public GameState
 {
 private:
@@ -33,4 +34,11 @@ public:
 	void Close() override;
 	void LoadShaders();
 	void LoadModels(const std::map<std::string, std::string>& models);
+	void DrawlineDDA(float XA, float YA, float XB, float YB);
+	void DrawlineBres(float XA, float YA, float XB, float YB);
+	void DrawlineBresmay(float XA, float YA, float XB, float YB);
+	void DrawlineBressenham(float XA, float YA, float XB, float YB);
+	void DrawCircunferencia(float XC, float YC, float r);
+	void CurvasdeBesier(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4);
+	void Pendiente();
 };
